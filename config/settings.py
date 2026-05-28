@@ -21,10 +21,7 @@ VECTOR_STORE_DIR.mkdir(parents=True, exist_ok=True)
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "groq").lower()  # gemini, groq, or perplexity
 
 # Gemini API Configuration
-GEMINI_API_KEY = os.getenv(
-    "GEMINI_API_KEY",
-    "AIzaSyC2OUGzujkOhkBMZmbXfMjNGw3SGx2fVpM"  # Default from user
-)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-embedding-001")
 GEMINI_GENERATION_MODEL = os.getenv("GEMINI_GENERATION_MODEL", "gemini-2.5-flash")
 
@@ -35,7 +32,7 @@ PERPLEXITY_EMBEDDING_MODEL = os.getenv("PERPLEXITY_EMBEDDING_MODEL", "pplx-embed
 PERPLEXITY_GENERATION_MODEL = os.getenv("PERPLEXITY_GENERATION_MODEL", "sonar-reasoning-pro")
 
 # Groq API Configuration
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "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")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_BASE_URL = os.getenv("GROQ_BASE_URL", "https://api.groq.com/openai/v1")
 GROQ_EMBEDDING_MODEL = os.getenv("GROQ_EMBEDDING_MODEL", "local-hash-embedding")
 GROQ_GENERATION_MODEL = os.getenv("GROQ_GENERATION_MODEL", "llama-3.3-70b-versatile")
@@ -60,10 +57,7 @@ VECTOR_DB_NAME = "rag-documents"
 VECTOR_DB_TYPE = "pinecone"  # Using Pinecone as vector database
 
 # Pinecone Configuration
-PINECONE_API_KEY = os.getenv(
-    "PINECONE_API_KEY",
-    "pcsk_3XinPJ_CFf1xxSwUoaHmWQSNoWyZkLdoj59wEsio7E95GN5Et6rvVWogHDExQvthaNQCfX"  # Your API key
-)
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_ENVIRONMENT = os.getenv(
     "PINECONE_ENVIRONMENT",
     "us-east-1"  # Default environment - update as needed
