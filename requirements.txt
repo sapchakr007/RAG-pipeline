@@ -9,3 +9,4 @@ openai>=1.0.0
 flask>=2.0.0
 flask-cors>=3.0.10
 groq>=0.4.2
+psutil>=5.9.0
