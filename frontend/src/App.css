@@ -1,0 +1,16 @@
+/* App Container */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
+
+@media (min-height: 1000px) {
+  .app {
+    align-items: center;
+  }
+}
