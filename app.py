@@ -362,10 +362,11 @@ if __name__ == '__main__':
     
     # Get port from environment or use 8000
     port = int(os.environ.get('FLASK_RUN_PORT', 8000))
+    host = os.environ.get('FLASK_RUN_HOST', '0.0.0.0')
     
     print("\n" + "=" * 60)
     print("🚀 Flask Backend Starting...")
     print("=" * 60)
-    print(f"📍 API URL: http://127.0.0.1:{port}")
+    print(f"📍 API URL: http://{host}:{port}")
     print("=" * 60 + "\n")
-    app.run(debug=False, host='127.0.0.1', port=port, use_reloader=False)
+    app.run(debug=False, host=host, port=port, use_reloader=False)
