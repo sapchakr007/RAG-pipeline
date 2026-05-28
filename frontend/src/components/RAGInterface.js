@@ -14,7 +14,7 @@ const RAGInterface = () => {
   const [history, setHistory] = useState([]);
   const [darkMode, setDarkMode] = useState(true);
 
-  const API_URL = 'http://localhost:5001/api';
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
 
   // Fetch health status and model info on component mount
   useEffect(() => {
