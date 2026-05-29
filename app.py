@@ -361,7 +361,7 @@ if __name__ == '__main__':
     CORS(app, resources={r"/api/*": {"origins": "*"}})
     
     # Get port from environment or use 8000
-    port = int(os.environ.get('FLASK_RUN_PORT', 8000))
+    port = int(os.environ.get('PORT', os.environ.get('FLASK_RUN_PORT', 8000)))
     host = os.environ.get('FLASK_RUN_HOST', '0.0.0.0')
     
     print("\n" + "=" * 60)

@@ -36,7 +36,7 @@ const TransactionTable = () => {
   // Category selection
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const API_URL = 'http://localhost:5001/api';
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
 
   // Fetch transactions on component mount
   useEffect(() => {

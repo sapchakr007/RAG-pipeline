@@ -43,7 +43,7 @@ const RAGInterface = () => {
       setTotalDocs(response.data.total_documents);
       setError('');
     } catch (err) {
-      setError('Failed to connect to backend. Make sure Flask server is running on http://localhost:5001');
+      setError(`Failed to connect to backend at ${API_URL}. Please ensure your backend is running and accessible.`);
       console.error(err);
     }
   };
